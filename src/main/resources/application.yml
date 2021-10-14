@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: '@project.name@'
+    version: '@project.version@'
+    description: '@project.description@'
+---
+spring:
+logging:
+  level:
+    org.springframework.web: DEBUG
