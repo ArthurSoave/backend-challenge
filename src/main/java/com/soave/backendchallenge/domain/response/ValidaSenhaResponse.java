@@ -1,5 +1,6 @@
 package com.soave.backendchallenge.domain.response;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.soave.backendchallenge.domain.model.Senha;
 
@@ -12,6 +13,7 @@ public class ValidaSenhaResponse {
         this.isValid = senha.getIsValid();
     }
 
+    @JsonIgnore
     public boolean isValid() {
         return isValid;
     }

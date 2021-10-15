@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.soave</groupId>
     <artifactId>backend-challenge</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
     <name>backend-challenge</name>
-    <description>backend-challenge</description>
+    <description>Aplicacao SpringBoot para validacao de senhas</description>
     <properties>
         <java.version>11</java.version>
     </properties>
