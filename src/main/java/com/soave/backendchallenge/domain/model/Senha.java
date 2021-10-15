@@ -18,11 +18,11 @@ public class Senha {
      * (?=.*[!@#$%^&*()-+]) ≥  ao menos um caractere especial
      * (?=.*[a-z]) ≥ ao menos uma letra minuscula
      * (?=.*[0-9]) ≥ ao menos um digito numerico
+     * (?!.*(.)\1) ≥ garante que a string nao possui caracteres repetidos em sequencia
      * .{9,}$ ≥ no minimo 9 caracteres
      *
      */
-    //todo -> implementar no regex a validacao de caratere repetido em sequencia
-    private static final String PATTERN = "^(?=.*[A-Z])(?=.*[!@#$%^&*()-+])(?=.*[a-z])(?=.*[0-9]).{9,}$";
+    private static final String PATTERN = "^(?=.*[A-Z])(?=.*[!@#$%^&*()-+])(?=.*[a-z])(?=.*[0-9])(?!.*(.)\\1).{9,}$";
 
     private boolean isValid;
 
