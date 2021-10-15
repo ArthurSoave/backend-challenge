@@ -11,7 +11,6 @@ public class SenhaTest {
     @Test
     @DisplayName("[Senha Invalida] - Retorna false quando senha tem apenas espacos em branco")
     void testaSenhaComEspacoemBranco(){
-
         var resultadoSenhaValidaObtida = new Senha(" ");
         Assertions.assertFalse(resultadoSenhaValidaObtida.getIsValid());
 

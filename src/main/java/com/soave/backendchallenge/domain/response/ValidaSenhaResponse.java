@@ -11,4 +11,8 @@ public class ValidaSenhaResponse {
     public ValidaSenhaResponse(Senha senha){
         this.isValid = senha.getIsValid();
     }
+
+    public boolean isValid() {
+        return isValid;
+    }
 }
