@@ -51,4 +51,25 @@ public class ValidaSenhaIntegrationTest {
                 .andReturn();
         Assertions.assertTrue(result.getResponse().getContentAsString().contains("true"));
     }
+
+    @Test
+    @DisplayName("[HTTP Status] - Retorna NOT_FOUND(404) quando a URI não é encontrada")
+    void testaIntegradoHttpNotFound()throws Exception{
+
+        ValidaSenhaRequest validaSenhaRequest = new ValidaSenhaRequest("AbTp9!foI");
+        mockMvc.perform(post("/v2/validacoes/validacao")
+                        .contentType("application/json")
+                        .content(objectMapper.writeValueAsString(validaSenhaRequest)))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("[HTTP Status] - Retorna BAD_REQUEST(400) quando a requisicao esta mal formada")
+    void testaIntegradoHttpBadGateway()throws Exception{
+
+        mockMvc.perform(post("/v1/validacoes/validacao")
+                        .contentType("application/json")
+                        .content(objectMapper.writeValueAsString(null)))
+                .andExpect(status().isBadRequest());
+    }
 }
