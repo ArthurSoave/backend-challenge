@@ -7,10 +7,10 @@ Considere uma senha sendo válida quando a mesma possuir as seguintes definiçõ
 - Ao menos 1 letra minúscula
 - Ao menos 1 letra maiúscula
 - Ao menos 1 caractere especial
-  - Considere como especial os seguintes caracteres: !@#$%^&*()-+
+    - Considere como especial os seguintes caracteres: !@#$%^&*()-+
 - Não possuir caracteres repetidos dentro do conjunto
 
-Exemplo:  
+Exemplo:
 
 ```c#
 IsValid("") // false  
@@ -41,7 +41,7 @@ Embora nossas aplicações sejam escritas em Kotlin e C# (.net core), você não
 - Design de API
 - Clean Code
 - SOLID
-- Documentação da solução no *README* 
+- Documentação da solução no *README*
 
 ## Pontos que não iremos avaliar
 
