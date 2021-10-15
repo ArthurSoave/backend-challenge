@@ -21,6 +21,7 @@ public class Senha {
      * .{9,}$ ≥ no minimo 9 caracteres
      *
      */
+    //todo -> implementar no regex a validacao de caratere repetido em sequencia
     private static final String PATTERN = "^(?=.*[A-Z])(?=.*[!@#$%^&*()-+])(?=.*[a-z])(?=.*[0-9]).{9,}$";
 
     private boolean isValid;
